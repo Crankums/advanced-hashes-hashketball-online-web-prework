@@ -149,7 +149,7 @@ def team_colors(team_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, value|
       if value == team_name
-        return :team_colors.value
+        return team_name.value
       end
     end
   end
