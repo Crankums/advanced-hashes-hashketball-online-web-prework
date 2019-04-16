@@ -155,6 +155,7 @@ shoe_string = []
             if player == player_name && i == :shoe
               shoe_string << j
             end
+          end
         end
       end
     end
