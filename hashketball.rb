@@ -186,8 +186,9 @@ def player_stats(player_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, value|
       if value == player_name
-        value.key
+        stat_hash = value.key
       end
     end
   end
+  stat_hash
 end
