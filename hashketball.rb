@@ -132,7 +132,7 @@ shoe_string = []
   game_hash.each do |location, team_data|
     team_data.each do |attribute,value|
       if attribute == :players
-        values.each do |player, stats|
+        value.each do |player, stats|
           stats.each do|i, j|
             if player == player_name && i == :shoe
               shoe_string << j
