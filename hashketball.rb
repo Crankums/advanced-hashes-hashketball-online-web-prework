@@ -151,5 +151,6 @@ def team_colors(team_name)
       if value == team_name
         return :team_colors.key
       end
+    end
   end
 end
