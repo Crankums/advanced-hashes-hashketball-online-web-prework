@@ -154,3 +154,13 @@ def team_colors(team_name)
   end
   colors
 end
+
+def team_names
+  name_array = []
+  game_hash.each do |location, team_data|
+    if team_data == :team_name
+      name_array << team_data.key 
+      end 
+  end
+  name_array
+end
