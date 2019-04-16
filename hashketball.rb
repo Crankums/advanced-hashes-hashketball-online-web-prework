@@ -124,7 +124,7 @@ game_hash.each do |location, team_data|
       end
     end
   end
-player_points.to_i
+player_points
 end
 
 def shoe_size(player_name)
@@ -142,7 +142,7 @@ shoe_string = []
       end
     end
   end
-  shoe_string[0].to_i
+  shoe_string[0]
 end
 
 def team_colors(team_name)
@@ -168,7 +168,7 @@ def player_numbers(team_name)
   game_hash.each do |location, team_data|
       team_data[:players].each do |player_name, stats|
         if team_data[:team_name] == team_name
-              jersey_arr << stats[:number].to_i
+              jersey_arr << stats[:number]
         end
       end
     end
