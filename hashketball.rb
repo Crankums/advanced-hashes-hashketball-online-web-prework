@@ -110,33 +110,98 @@ def game_hash
 end
 
 def num_points_scored(player_name)
-  game_hash.each do |location, team_data|
-    team_data.each do |attribute, data|
-      data.each do |data_item|
-        data_item do |player_stats|
-          return a
+player_points = 0
+game_hash.each do |location, team_data|
+  team_data.each do |attribute, values|
+    if attribute == :players 
+      values.each do |player, stats|
+        stats.each do |i, j|
+          if player == player_name && i == :points
+            player_points = j
+            end
+          end
         end
       end
     end
   end
+player_points
 end
 
 def shoe_size(player_name)
-
+shoe_string = []
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute,value|
+      if attribute == :players
+        values.each do |player, stats|
+          stats.each do|i, j|
+            if player == player_name && i == :shoe
+              shoe_string << j
+            end
+        end
+      end
+    end
+  end
+  shoe_string[0]
 end
 
 def team_colors(team_name)
-
+  
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, value|
+      if value == team_name
+        return :team_colors.key
+      end
+  end
 end
 
-def team_name(hash)
-
+def team_names
+  name_array = []
+  game_hash.each do |location, team_data|
+    if team_data == :team_name
+      name_array << team_data.key 
+      end 
+  end
+  name_array
 end
 
 def player_numbers(team_name)
-
+  jersey_arr = []
+  game_hash.each do |location, team_data|
+    if team_data == team_name
+      team_data.each do |attribute, value|
+        if attribute == :players
+          value.each do |i, j|
+            if i == :number
+              jersey_arr << j
+            end
+          end
+        end
+      end 
+    end
+  end
+  jersey_arr
 end
 
 def player_stats(player_name)
-
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, value|
+      if value == player_name
+        value.key
+      end
+    end
+  end
 end
+=begin
+def big_shoe_rebounds
+  shoe_size = 0
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, values|
+      if attribute == :players
+        values.each do |i, j|
+          if i == :shoe
+            if j.to_i > shoe_size
+            shoe_size = j  
+    end
+  end
+end
+=end
