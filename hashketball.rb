@@ -113,7 +113,7 @@ def num_points_scored(player_name)
 player_points = 0
 game_hash.each do |location, team_data|
   team_data.each do |attribute, values|
-    if attribute == :players 
+    if attribute == :players
       values.each do |player, stats|
         stats.each do |i, j|
           if player == player_name && i == :points
@@ -145,7 +145,7 @@ shoe_string = []
 end
 
 def team_colors(team_name)
-  
+
   game_hash.each do |location, team_data|
     team_data.each do |attribute, value|
       if value == team_name
@@ -158,8 +158,8 @@ def team_names
   name_array = []
   game_hash.each do |location, team_data|
     if team_data == :team_name
-      name_array << team_data.key 
-      end 
+      name_array << team_data.key
+      end
   end
   name_array
 end
@@ -176,7 +176,7 @@ def player_numbers(team_name)
             end
           end
         end
-      end 
+      end
     end
   end
   jersey_arr
@@ -200,7 +200,7 @@ def big_shoe_rebounds
         values.each do |i, j|
           if i == :shoe
             if j.to_i > shoe_size
-            shoe_size = j  
+            shoe_size = j
     end
   end
 end
