@@ -169,11 +169,8 @@ def player_numbers(team_name)
       team_data[:players].each do |player_name, stats|
         if team_data[:team_data] == team_name
               jersey_arr << stats[:number]
-            end
-          end
         end
       end
     end
-  end
   jersey_arr
 end
