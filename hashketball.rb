@@ -162,5 +162,5 @@ def team_names
       name_array << team_data.key
       end
   end
-  name_array
+  name_array.join(' ')
 end
