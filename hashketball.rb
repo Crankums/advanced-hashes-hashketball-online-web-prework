@@ -142,5 +142,5 @@ shoe_string = []
       end
     end
   end
-  shoe_string[0]
+  shoe_string[0].to_i
 end
