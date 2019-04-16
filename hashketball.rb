@@ -174,3 +174,15 @@ def player_numbers(team_name)
     end
   jersey_arr
 end
+
+def player_stats(player_name)
+  game_hash.each do |location, team_data|
+    team_data.each do |attribute, value|
+      if value == player_name
+        value.key
+      end
+    end
+  end
+end
+
+
