@@ -124,5 +124,5 @@ game_hash.each do |location, team_data|
       end
     end
   end
-player_points
+player_points.to_i
 end
