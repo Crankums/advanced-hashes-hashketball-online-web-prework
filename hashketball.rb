@@ -127,24 +127,6 @@ game_hash.each do |location, team_data|
 player_points.to_i
 end
 
-def num_points_scored(player_name)
-player_points = 0
-game_hash.each do |location, team_data|
-  team_data.each do |attribute, values|
-    if attribute == :players
-      values.each do |player, stats|
-        stats.each do |i, j|
-          if player == player_name && i == :points
-            player_points = j
-            end
-          end
-        end
-      end
-    end
-  end
-player_points
-end
-
 def shoe_size(player_name)
 shoe_string = []
   game_hash.each do |location, team_data|
