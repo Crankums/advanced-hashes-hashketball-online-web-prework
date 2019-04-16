@@ -145,7 +145,7 @@ shoe_string = []
   shoe_string[0].to_i
 end
 
-def team_colors(team_name)  
+def team_colors(team_name)
   game_hash.each do |location, team_data|
     team_data.each do |attribute, value|
       if value == team_name
@@ -153,8 +153,3 @@ def team_colors(team_name)
       end
   end
 end
-
-
-
-
-
