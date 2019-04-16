@@ -158,9 +158,8 @@ end
 def team_names
   name_array = []
   game_hash.each do |location, team_data|
-    if team_data == :team_name
-      name_array << team_data.key
+      name_array << team_data[:team_name]
       end
   end
-  name_array.join(' ')
+  name_array
 end
