@@ -162,3 +162,21 @@ def team_names
   end
   name_array
 end
+
+def player_numbers(team_name)
+  jersey_arr = []
+  game_hash.each do |location, team_data|
+    if team_data == team_name
+      team_data.each do |attribute, value|
+        if attribute == :players
+          value.each do |i, j|
+            if i == :number
+              jersey_arr << j
+            end
+          end
+        end
+      end 
+    end
+  end
+  jersey_arr
+end
